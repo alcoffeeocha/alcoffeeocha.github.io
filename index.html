@@ -1,14 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <style>
-      body {
-        background-color: #1f1f1f;
-      }
-    </style>
-  </head>
-  <body></body>
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Alkahfi</title>
+	<link rel="stylesheet" href="all.css">
+	<link rel="icon" type="image/x-icon" href="assets/favicon-straw.ico">
+</head>
+
+<body>
+	<h1>I am <span class="js-my-name">Alkahfi</span>, a Human Being.</h1>
+	<p>Thanks to <a href="https://www.youtube.com/watch?v=EXfFBEuCAr0" target="_blank">@NetworkChuck</a> who has helped me
+		to start.</p>
+	<img class="_cover" width="150" height="150" src="assets/cappuccino.jpeg" alt="a cup of coffee and small plate, feels like in warung kopi indonesia">
+	<p>Sip your coffee...<br /><br />Enjoy!</p>
+	<h2>Stuffs</h2>
+	<nav>
+		<ul>
+			<li>
+				<a href="about.html">Who am I</a>
+			</li>
+			<li>
+				<a href="about.html">Past Works</a>
+			</li>
+		</ul>
+	</nav>
+	<h2>Want to Connect?</h2>
+	<p>Text me via <a href="mailto:alkahfikhz@proton.me">Email</a> or <a
+			href="https://www.instagram.com/alkahfikhz/">Instagram</a></p>
+	<script>
+		const NICK_CHANGE_INTEVAL = 3500
+		const nickNames = [
+			"Alkahfi",
+			"Al-Kahfi",
+			"Kahfi",
+			"Alfi",
+			"AK",
+			"Alcoffeeocha",
+		]
+		const myName = document.querySelector(".js-my-name")
+		
+		function pickNickRandomly(){
+			const countNick = nickNames.length
+			const randomIndex = Math.floor(Math.random() * countNick)
+			return randomIndex
+		}
+		myName.textContent = nickNames[pickNickRandomly()]
+	</script>
+</body>
+
 </html>
