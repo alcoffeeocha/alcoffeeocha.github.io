@@ -7,8 +7,16 @@ body {
 	background-color: #f5f5f5;
 }
 
+main {
+	margin-bottom: 64px;
+}
+
 nav ul {
 	list-style-type: none;
+}
+
+nav ul li {
+	margin-bottom: 8px;
 }
 
 img {
