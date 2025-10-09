@@ -30,6 +30,11 @@ main {
   padding-bottom: 64px;
 }
 
+ul,
+ol {
+  margin-block: 24px;
+}
+
 nav ul {
   list-style-type: none;
 }
