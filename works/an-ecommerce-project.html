@@ -1,102 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alkahfi | Works | an E-Commerce Project</title>
+    <link rel="stylesheet" href="/all.css?v=210624" />
+    <link rel="icon" type="image/x-icon" href="/assets/favicon-straw.ico" />
+    <meta name="robots" content="noindex,nofollow" />
+  </head>
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Alkahfi | Works | an E-Commerce Project</title>
-	<link rel="stylesheet" href="/all.css?v=210624">
-	<link rel="icon" type="image/x-icon" href="/assets/favicon-straw.ico">
-	<meta name="robots" content="noindex,nofollow">
-</head>
-
-<body>
-	<nav class="_mb-3">
-		<a href="/works.html">Past Works</a>
-		<br>
-	</nav>
-	<div class="container">
-		<hr style="border-style: dashed;">
-		<header>
-			<h1>an E-Commerce Project</h1>
-			<h2>First Look at Single Page Application</h2>
-		</header>
-		<main>
-			<article>
-				<p>The start-up where I applied my frontend skills had taken on a fairly large project. Our client, a Cakes and
-					Bakery business, already had a website and wanted to add more functionality than just information and links to
-					buy product.</p>
-				<p>Our team then envisioned a solution: building an e-commerce platform. Visitors can add products to
-					their cart, checkout, and make payments, just like on a typical e-commerce website. That's why I consider this
-					was a big project.</p>
-				<p>After discussing the list of features, our friend, the UI/UX designer, created a mockup or hi-fi design. "It
-					can't be done with simple technology; a PHP web application with CodeIgniter seems difficult to split.
-					Something new is needed." I thought. Although, thinking back now, it could actually work. Suddenly, I remembered Vue, a JavaScript framework that seems suitable for this project.
-					I wanted to try.</p>
-				<p>I did some research on YouTube to find out what the backend should be like if we use Vue. I had heard about
-					Laravel + Vue but didn't know much about it. Besides, my backend friend usually uses CodeIgniter 4, so I
-					ignored it. I found a tutorial on VueJS &amp; CodeIgniter 4, which is a perfect fit.</p>
-				<p>"It turns out that the frontend can indeed be separated from the backend, with data exchange via APIs. Tokens
-					are needed for security; this is completely new to me!"</p>
-				<p>Boldly, I suggested to my friend that we try something new for this project. I explained the idea, and since
-					my colleague had just heard the term REST API, I needed to provide that tutorial.</p>
-				<p>The two of us continued learning: I delved deeper into Vue, while my friend explored how APIs work, since the
-					framework they usually used sent HTML to the browser.</p>
-				<p>I was assisted by two other programmers. They created components so I didn't need to make everything. I
-					converted those components into Vue Single-File Components. Implementing global state management using Vuex.
-					Added Navigation Guard to protect admin resource. Many pages to build.</p>
-			</article>
-			<article>
-				<h3>The Tech Stack</h3>
-				<p>This website used the following tech stack:</p>
-				<ul>
-					<li>Frontend: <a href="https://vuejs.org/" target="_blank">Vue Ecosystem</a>, <a href="https://tailwindcss.com/">Tailwindcss</a></li>
-					<li>API Architecture: REST</li>
-					<li>Payment Gateway</li>
-					<li>Some Google Maps API</li>
-				</ul>
-				<p>Tailwindcss can helped us to do styling faster, highly customizable and it's also suitable with Vue.</p>
-			</article>
-			<article>
-				<h3>Some Parts of The Web</h3>
-				<figure class="_mb-4">
-					<img class="_contain" loading="lazy" width="300" height="400" src="images/dcika/d-home.png"
-						alt="Screenshot 1">
-					<figcaption>Landing Page</figcaption>
-				</figure>
-				<figure class="_mb-4">
-					<img class="_contain" loading="lazy" width="300" height="400" src="images/dcika/d-login.png"
-						alt="Screenshot 2">
-					<figcaption>Login Popup</figcaption>
-				</figure>
-				<figure class="_mb-4">
-					<img class="_contain" loading="lazy" width="300" height="400" src="images/dcika/d-checkout.png"
-						alt="Screenshot 4">
-					<figcaption>Checkout Page</figcaption>
-				</figure>
-			</article>
-			<article>
-				<h3>Valuable Lessons</h3>
-				<p>I will start with the problem.</p>
-				<p>This project did not meet the client's expectations.<br />It was a hard blow for me as a developer.</p>
-				<p>There's just one thing I can share: I found out midway through development that SPAs were not really meant
-					for SEO. I needed to do pre-rendering or implement SSG/SSR, and Nuxt was a shorter path if we want to migrate.
-					SEO was an important aspect that this website should have had.</p>
-				<p>Lessons I got from the project are:</p>
-				<ul>
-					<li>Good developers are willing to sacrifice their time early and as wisely as possible.<br />I did not give
-						my best effort.</li>
-					<li>Telling REST API to my friend, was a relaxing experience. I believe it will help him in his web
-						development
-						journey out there.</li>
-					<li>Requirements may change, but asking early feedback from the client is highly recommended. Pay attention to
-						both
-						functional and non-functional requirements. Does the technology support these? Later on, it could be like my
-						case where it was not SEO friendly.</li>
-				</ul>
-			</article>
-		</main>
-		<h1></h1>
-</body>
-
+  <body>
+    <nav class="menu-links">
+      <a href="/works">Back</a>
+      <a href="/">Home</a>
+    </nav>
+    <div class="container">
+      <hr style="border-style: dashed" />
+      <header>
+        <h1>an E-Commerce Project</h1>
+        <h2>First Look at Single Page Application</h2>
+      </header>
+      <main>
+        <article>
+          <p>
+            The start-up where I applied my frontend skills had taken on a
+            fairly large project. Our client, a Cakes and Bakery business,
+            already had a website and wanted to add more functionality than just
+            information and links to buy product.
+          </p>
+          <p>
+            Our team then envisioned a solution: building an e-commerce
+            platform. Visitors can add products to their cart, checkout, and
+            make payments, just like on a typical e-commerce website. That's why
+            I consider this was a big project.
+          </p>
+          <p>
+            After discussing the list of features, our friend, the UI/UX
+            designer, created a mockup or hi-fi design. "It can't be done with
+            simple technology; a PHP web application with CodeIgniter seems
+            difficult to split. Something new is needed." I thought. Although,
+            thinking back now, it could actually work. Suddenly, I remembered
+            Vue, a JavaScript framework that seems suitable for this project. I
+            wanted to try.
+          </p>
+          <p>
+            I did some research on YouTube to find out what the backend should
+            be like if we use Vue. I had heard about Laravel + Vue but didn't
+            know much about it. Besides, my backend friend usually uses
+            CodeIgniter 4, so I ignored it. I found a tutorial on VueJS &amp;
+            CodeIgniter 4, which is a perfect fit.
+          </p>
+          <p>
+            "It turns out that the frontend can indeed be separated from the
+            backend, with data exchange via APIs. Tokens are needed for
+            security; this is completely new to me!"
+          </p>
+          <p>
+            Boldly, I suggested to my friend that we try something new for this
+            project. I explained the idea, and since my colleague had just heard
+            the term REST API, I needed to provide that tutorial.
+          </p>
+          <p>
+            The two of us continued learning: I delved deeper into Vue, while my
+            friend explored how APIs work, since the framework they usually used
+            sent HTML to the browser.
+          </p>
+          <p>
+            I was assisted by two other programmers. They created components so
+            I didn't need to make everything. I converted those components into
+            Vue Single-File Components. Implementing global state management
+            using Vuex. Added Navigation Guard to protect admin resource. Many
+            pages to build.
+          </p>
+        </article>
+        <article>
+          <h3>The Tech Stack</h3>
+          <p>This website used the following tech stack:</p>
+          <ul>
+            <li>
+              Frontend:
+              <a href="https://vuejs.org/" target="_blank">Vue Ecosystem</a>,
+              <a href="https://tailwindcss.com/">Tailwindcss</a>
+            </li>
+            <li>API Architecture: REST</li>
+            <li>Payment Gateway</li>
+            <li>Some Google Maps API</li>
+          </ul>
+          <p>
+            Tailwindcss can helped us to do styling faster, highly customizable
+            and it's also suitable with Vue.
+          </p>
+        </article>
+        <article>
+          <h3>Some Parts of The Web</h3>
+          <figure class="_mb-4">
+            <img
+              class="_contain"
+              loading="lazy"
+              width="300"
+              height="400"
+              src="images/dcika/d-home.png"
+              alt="Screenshot 1"
+            />
+            <figcaption>Landing Page</figcaption>
+          </figure>
+          <figure class="_mb-4">
+            <img
+              class="_contain"
+              loading="lazy"
+              width="300"
+              height="400"
+              src="images/dcika/d-login.png"
+              alt="Screenshot 2"
+            />
+            <figcaption>Login Popup</figcaption>
+          </figure>
+          <figure class="_mb-4">
+            <img
+              class="_contain"
+              loading="lazy"
+              width="300"
+              height="400"
+              src="images/dcika/d-checkout.png"
+              alt="Screenshot 4"
+            />
+            <figcaption>Checkout Page</figcaption>
+          </figure>
+        </article>
+        <article>
+          <h3>Valuable Lessons</h3>
+          <p>I will start with the problem.</p>
+          <p>
+            This project did not meet the client's expectations.<br />It was a
+            hard blow for me as a developer.
+          </p>
+          <p>
+            There's just one thing I can share: I found out midway through
+            development that SPAs were not really meant for SEO. I needed to do
+            pre-rendering or implement SSG/SSR, and Nuxt was a shorter path if
+            we want to migrate. SEO was an important aspect that this website
+            should have had.
+          </p>
+          <p>Lessons I got from the project are:</p>
+          <ul>
+            <li>
+              Good developers are willing to sacrifice their time early and as
+              wisely as possible.<br />I did not give my best effort.
+            </li>
+            <li>
+              Telling REST API to my friend, was a relaxing experience. I
+              believe it will help him in his web development journey out there.
+            </li>
+            <li>
+              Requirements may change, but asking early feedback from the client
+              is highly recommended. Pay attention to both functional and
+              non-functional requirements. Does the technology support these?
+              Later on, it could be like my case where it was not SEO friendly.
+            </li>
+          </ul>
+        </article>
+      </main>
+    </div>
+  </body>
 </html>

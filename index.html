@@ -21,45 +21,48 @@
   </head>
 
   <body>
-    <h1>
-      I am <span class="js-my-name">Alkahfi</span>. Welcome to My Homepage.
-    </h1>
-    <p>
-      Thanks to
-      <a href="https://www.youtube.com/watch?v=EXfFBEuCAr0" target="_blank"
-        >@NetworkChuck</a
-      >
-      who has helped me to start.
-    </p>
-    <img
-      class="_cover"
-      width="150"
-      height="150"
-      src="assets/cappuccino.jpeg"
-      alt="a cup of coffee and small plate, feels like in warung kopi indonesia"
-    />
-    <p>Sip your coffee...<br /><br />Enjoy!</p>
-    <h2>Contents</h2>
-    <nav>
-      <ul>
-        <li>
-          <a href="about/index.html">Who am I</a>
-        </li>
-        <li>
-          <a href="works/index.html">Works I did in the past</a>
-        </li>
-      </ul>
-    </nav>
-    <h2>Want to Discuss?</h2>
-    <p>
-      Send me
-      <a href="mailto:alkahfikhz@proton.me">Email</a> or DM me on
-      <a href="https://www.linkedin.com/in/alcoffeeocha/">LinkedIn</a>
-    </p>
+    <main>
+      <h1>
+        I am <span class="js-my-name">Alkahfi</span>. Welcome to My Homepage.
+      </h1>
+      <p>
+        Thanks to
+        <a href="https://www.youtube.com/watch?v=EXfFBEuCAr0" target="_blank"
+          >@NetworkChuck</a
+        >
+        who has helped me to start.
+      </p>
+      <img
+        class="_cover"
+        width="150"
+        height="150"
+        src="assets/cappuccino.jpeg"
+        alt="a cup of coffee and small plate, feels like in warung kopi indonesia"
+      />
+      <p>Sip your coffee...<br /><br />Enjoy!</p>
+      <h2 id="menu-title">Stories</h2>
+      <nav>
+        <ul role="menu" aria-labelledby="menu-title">
+          <li role="presentation">
+            <a role="menuitem" href="about">Who am I?</a>
+          </li>
+          <li role="presentation">
+            <a role="menuitem" href="works">Lessons Learned from Past Work.</a>
+          </li>
+        </ul>
+      </nav>
+      <h2>Wanna Discuss?</h2>
+      <p>Ask me anything — life, coding, frontend development, or Islam.</p>
+      <p>
+        Via
+        <a href="mailto:alkahfi25@gmail.com">email</a> or
+        <a href="https://www.linkedin.com/in/alcoffeeocha/">LinkedIn</a>.
+      </p>
+    </main>
     <script>
       const NICK_CHANGE_INTEVAL = 3500;
-      const nickNames = ['Alkahfi', 'Kahfi', 'Alfi', 'Kaf'];
-      const myName = document.querySelector('.js-my-name');
+      const nickNames = ["Alkahfi", "Kahfi", "Alfi", "Kaf"];
+      const myName = document.querySelector(".js-my-name");
 
       function pickNickRandomly() {
         const countNick = nickNames.length;
