@@ -71,6 +71,16 @@ a {
   text-decoration: none;
 }
 
+a,
+a:active {
+  color: #0000ee;
+}
+
+a:visited,
+a:visited:active {
+  color: #551a8b;
+}
+
 a:hover,
 a:active {
   text-decoration: underline;
