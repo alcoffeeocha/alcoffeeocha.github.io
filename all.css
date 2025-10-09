@@ -9,6 +9,8 @@ body {
 *,
 *::before,
 *::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -17,10 +19,11 @@ html {
 }
 
 body {
+  margin: 0;
+  padding-inline: 20px;
+
   color: #4d4d4d;
   background-color: #f5f5f5;
-  margin: 0;
-  padding-inline: 12px;
 }
 
 main {
@@ -31,8 +34,9 @@ nav ul {
   list-style-type: none;
 }
 
-nav ul li {
-  margin-bottom: 8px;
+nav ul li,
+nav ol li {
+  margin-bottom: 12px;
 }
 
 img {
@@ -44,6 +48,8 @@ figure {
 }
 
 figcaption {
+  font-size: 0.875rem;
+
   color: #666;
 }
 
@@ -56,6 +62,72 @@ hr {
   margin-bottom: revert;
 }
 
+a {
+  text-decoration: none;
+}
+
+a:hover,
+a:active {
+  text-decoration: underline;
+}
+
+/* Typography */
+@font-face {
+  font-family: "Roboto Slab";
+  src: url(./assets/RobotoSlab-Regular.ttf);
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto Slab";
+  src: url(./assets/RobotoSlab-Medium.ttf);
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto Slab";
+  src: url(./assets/RobotoSlab-SemiBold.ttf);
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto Slab";
+  src: url(./assets/RobotoSlab-Bold.ttf);
+  font-weight: 700;
+  font-style: normal;
+}
+
+body {
+  font-family: "Roboto Slab", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: 1rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+h2,
+h3 {
+  font-weight: 600;
+}
+
+h4,
+h5,
+h6,
+strong {
+  font-weight: 500;
+}
+
+/* \ Typography */
+
 /* Components */
 .container {
   max-width: 576px;
@@ -64,7 +136,9 @@ hr {
 .file-tree {
   position: relative;
   margin-block: 20px;
+
   line-height: 1.5;
+
   color: #212529;
   list-style: none;
 }
@@ -72,6 +146,7 @@ hr {
 .file-tree ul {
   margin: 0;
   padding-left: 5px;
+
   list-style: none;
 }
 
@@ -80,19 +155,18 @@ hr {
   padding-top: 5px;
   padding-bottom: 5px;
   padding-left: 15px;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
 }
 
 .file-tree li::before {
   position: absolute;
   top: 15px;
   left: 0;
+  content: "";
+
   width: 10px;
   height: 1px;
   margin: auto;
-  content: "";
+
   background-color: #666;
 }
 
@@ -106,9 +180,11 @@ hr {
   top: 0;
   bottom: 0;
   left: 0;
+  content: "";
+
   width: 1px;
   height: 100%;
-  content: "";
+
   background-color: #666;
 }
 
@@ -129,8 +205,9 @@ hr {
 }
 
 .img-gallery > img {
-  object-fit: cover;
   height: auto;
+
+  object-fit: cover;
 }
 
 .img-gallery.-two-cols > img {
@@ -145,6 +222,17 @@ hr {
 .menu-links > a {
   display: inline-block;
   padding: 16px;
+
+  text-decoration: none;
+  transition: background-color 200ms linear;
+}
+
+.menu-links > a:hover {
+  background-color: hsl(0, 0%, 93%);
+}
+
+.menu-links > a:active {
+  background-color: hsl(0, 0%, 88%);
 }
 
 /* Helpers */
@@ -170,4 +258,8 @@ hr {
 
 ._mb-4 {
   margin-bottom: 1.5rem !important;
+}
+
+._nowrap {
+  white-space: nowrap;
 }
