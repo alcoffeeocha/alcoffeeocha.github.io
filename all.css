@@ -155,6 +155,19 @@ strong {
   margin-inline: auto;
 }
 
+.index-title {
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.text-credit {
+  font-size: 1rem;
+}
+
+.article-header {
+  margin-block-end: 52px;
+}
+
 .file-tree {
   position: relative;
   margin-block: 20px;
@@ -284,4 +297,8 @@ strong {
 
 ._nowrap {
   white-space: nowrap;
+}
+
+._text-muted {
+  color: hsl(0, 0%, 85%) !important;
 }

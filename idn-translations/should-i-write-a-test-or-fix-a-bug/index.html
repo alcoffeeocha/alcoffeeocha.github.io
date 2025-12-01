@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Alkahfi | Indonesia Translations | Haruskah saya menulis test atau
+      memperbaiki bug?
+    </title>
+    <link rel="stylesheet" href="/all.css?v=210624" />
+    <link rel="icon" type="image/x-icon" href="/assets/favicon-straw.ico" />
+    <meta name="robots" content="noindex,nofollow" />
+  </head>
+
+  <body>
+    <div class="container">
+      <nav class="menu-links">
+        <a href="/idn-translations/">Back</a>
+        <a href="/">Home</a>
+      </nav>
+      <hr style="border-style: dashed" />
+      <main>
+        <header class="article-header">
+          <h1>
+            Haruskah saya menulis pengujian atau memperbaiki <em>bug</em>?
+          </h1>
+          <strong class="text-credit">
+            This is a translation of the original post
+            <a
+              href="https://kentcdodds.com/blog/should-i-write-a-test-or-fix-a-bug"
+              target="_blank"
+            >
+              "Should I write a test or fix a bug?"</a
+            >
+            by
+            <a href="https://kentcdodds.com/" target="_blank">Kent C. Dodds</a>.
+          </strong>
+          <p class="_text-muted">1 Desember 2025 | 4 menit</p>
+        </header>
+        <article>
+          <p>
+            Pengujian otomatis, tidak berbeda dengan perangkat lunak yang kita
+            tulis. Mereka bermain pada lingkup prioritas yang sama seperti hal
+            lain pada umumnya. Kamu punya fitur-fitur yang perlu ditentukan,
+            desain yang dibuat,
+            <em>bugs</em> yang perlu diperbaiki, rapat
+            <em>requirements gathering</em> yang harus dilakukan,
+            <em>flags</em> fitur yang harus disusun, dan lain-lain. Supaya dapat
+            membuat prioritas dari aktivitas-aktivitas ini, kamu harus tau biaya
+            dari tidak melakukannya dan manfaat bila diselesaikan. Dan ketika
+            membuat prioritas, kamu tidak mengatakan, kamu "tidak akan"
+            melakukan itu, kamu hanya mengatakan kamu akan mengerjakan satu hal
+            terlebih dahulu. Jadi hal itu juga bisa membantu untuk tau, secara
+            relatif, biaya/manfaat jika dilakukan <strong>nanti</strong>
+            <em>versus</em> biaya/manfaat jika dilakukan
+            <strong>sekarang</strong>.
+          </p>
+          <p>Mari ambil beberapa skenario berbeda.</p>
+          <ol>
+            <li>
+              Sebuah <em>bug</em> mencegah pengguna mengubah bio mereka jika
+              mereka tidak memasang avatar lebih dulu.
+            </li>
+            <li>
+              Alur <em>checkout</em> produk yang kamu buat tidak tercakup dalam
+              pengujian.
+            </li>
+          </ol>
+          <p>
+            Persoalan <em>bug</em>, biaya yang diterima berupa satu UI yang
+            tidak bisa diandalkan bagi segelintir pengguna yang tidak mengunggah
+            avatar, namun ingin mengubah bio mereka. Bukanlah pengalaman yang
+            baik.
+          </p>
+          <p>
+            Persoalan alur <em>checkout</em>, itu cukup serius. Perubahan
+            <em>code</em> apapun yang menyentuh alur tersebut bisa saja merusak
+            alur <em>checkout</em> (berpotensi memberi kerugian uang bagi
+            penjual dan waktu berharga bagi pembeli).
+          </p>
+          <p>
+            Saya pikir untuk kasus itu, mari prioritaskan menambah satu
+            pengujian dulu, dan dilanjut perbaikan <em>bug</em>.
+          </p>
+          <p>Ok, skenario yang lain.</p>
+          <ol>
+            <li>
+              Kamu sedang membangun perusahaan <em>startup</em> dan kamu belum
+              mulai menjual produk mu karena fiturnya belum cukup lengkap untuk
+              dikatakan berguna. Kamu mulai kehabisan uang.
+            </li>
+            <li>
+              Kamu baru saja menulis sebuah <em>function</em> kecil, untuk
+              menghitung jarak scroll yang dibutuhkan
+              <em>scrollable list</em> mu, pada saat pengguna menekan tombol
+              <em>ArrowDown</em> dan kamu mencoba untuk memutuskan, dibuatkan
+              pengujiannya atau tidak ya?
+            </li>
+          </ol>
+          <p>
+            Demi kebaikanmu, abaikan pengujian tersebut, upayakan peluncuran
+            produk mu dan jual lah! uang mu mulai menipis 🔥💵🔥
+          </p>
+          <p>
+            Dengan kata lain, kamu mungkin menemukan bahwa <em>demo</em> untuk
+            klien potensial tidak berjalan dengan baik karena insinyur mu terus
+            menerus menghasilkan <em>code</em> yang cacat. Dalam keadaan ini,
+            tulislah satu atau dua pengujian E2E (<em>End-to-End</em>) yang
+            cepat dan sederhana, untuk alur umum dalam <em>demo</em> dan
+            jalankan itu sebelum kamu <em>merge</em> <em>code</em> apa pun.
+          </p>
+          <p>Mari coba satu skenario terakhir. Iseng aja.</p>
+          <ol>
+            <li>
+              Kamu baru saja mengimplementasikan sebuah fitur baru yang
+              memungkinkan pengguna untuk membuat sebuah <em>playlist</em> dari
+              lagu-lagu favorit mereka. Kamu memikirkan apakah perlu menambahkan
+              pengujian.
+            </li>
+            <li>
+              Kamu melihat sebuah <em>font</em> keren dan tema
+              <em>editor</em> di sebuah siaran langsung dari
+              <em>developer</em> favoritmu dan kamu ingin bertanya kepada mereka
+              apa nama nya supaya kamu bisa mencoba nya.
+            </li>
+          </ol>
+          <br />
+          <p style="font-size: 1.25rem">😐</p>
+          <p>
+            Apa yang ingin saya sampaikan pada postingan ini ialah pengujian
+            tidaklah berbeda dengan urusan lainnya (apa saja) yang bisa kamu
+            lakukan dengan waktu yang kamu punya. Pertimbangkan biaya dan
+            manfaat, dan bertindak sesuai itu. Ingatlah bahwa pengujian adalah
+            pemberi manfaat yang berkelanjutan.
+          </p>
+          <p>Semoga beruntung!</p>
+        </article>
+      </main>
+    </div>
+  </body>
+</html>
