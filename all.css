@@ -89,15 +89,39 @@ a:active {
 
 /* Typography */
 @font-face {
-  font-family: "Fredoka";
-  src: url(./assets/Fredoka-Variable.ttf);
-  font-weight: 400 700;
+  font-family: RedHatDisplay;
+  src: url(./assets/RedHatDisplay-Bold.ttf);
+  font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 
+@font-face {
+  font-family: RedHatDisplay;
+  src: url(./assets/RedHatDisplay-BoldItalic.ttf);
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: RedHatDisplay;
+  src: url(./assets/RedHatDisplay-SemiBold.ttf);
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: RedHatDisplay;
+  src: url(./assets/RedHatDisplay-SemiBoldItalic.ttf);
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
 body {
-  font-family: "Fredoka", sans-serif;
+  font-family: sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
   font-size: 0.875rem;
@@ -144,9 +168,19 @@ h6 {
   margin-block: 0.75rem;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: RedHatDisplay, sans-serif;
+}
+
 strong {
   font-weight: 600;
 }
+
 /* \ Typography */
 
 /* Components */
@@ -205,8 +239,8 @@ strong {
   background-color: #666;
 }
 
-.file-tree > ul > li::before,
-.file-tree > ul > li::after {
+.file-tree>ul>li::before,
+.file-tree>ul>li::after {
   display: none;
 }
 
@@ -239,13 +273,13 @@ strong {
   padding: 24px;
 }
 
-.img-gallery > img {
+.img-gallery>img {
   height: auto;
 
   object-fit: cover;
 }
 
-.img-gallery.-two-cols > img {
+.img-gallery.-two-cols>img {
   width: 45%;
   height: auto;
 }
