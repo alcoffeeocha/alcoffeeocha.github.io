@@ -55,7 +55,7 @@
             application for recording employee task hours that synchronizes with
             Basecamp (the project management platform used by our office). We
             used Flutter to build this application. Flutter is a popular
-            framework built on the Dart programming language, allowing us to
+            framework built on Dart programming language, allowing us to
             create applications that can run on various platforms
             (cross-platform). Both Flutter and Dart are developed by Google.
             Flutter effectively abstracts the object-oriented programming
@@ -72,10 +72,10 @@
           <p>
             There were several architectural options, various state management
             libraries to choose from, and considerations for how the API would
-            be consumed. In the end, I leaned towards the advice of an
+            be consumed. In the end, I leaned towards advice of an
             experienced Flutter developer. Thank you
             <a href="https://github.com/bizz84" target="_blank">Andrea</a> for
-            your Dart and Flutter courses, this is the recipe that I used:
+            your Dart and Flutter courses. Here is recipe that we used:
           </p>
           <ul>
             <li>
@@ -94,7 +94,7 @@
               Important Dart Libraries: GoRouter, OAuth2, Sembast,
               stop_watch_timer, http
             </li>
-            <li>Design Pattern: Repository</li>
+            <li>Applied Design Patterns: Repository</li>
           </ul>
           <p>
             The main goal was Separation of Concerns: separating the user
@@ -108,15 +108,15 @@
             This application was required
             <strong>to record how long staff worked on a task</strong>. A
             stopwatch feature with start, pause, stop, and save functionalities
-            was created to meet these expectations. The list of to-dos assigned
+            was created to meet these expectations. The list of to-do assigned
             to an employee in Basecamp would be displayed in the application if
             the employee logged in using their Basecamp account. Changes on
             to-do metadata in the application, such as the duration of the
             to-do, had to be persisted.
           </p>
           <p>
-            The flow is as follows: the user logs in with their Basecamp
-            account, their list of to-dos is displayed, the user starts a
+            The flow is as follows: User log in with his Basecamp
+            account, his list of to-do is displayed, the user starts a
             stopwatch on a to-do, the stopwatch can be stopped and the elapsed
             time for that to-do is saved, accumulating the duration from
             previous ones.
@@ -131,32 +131,32 @@
           <p>
             The Basecamp API uses OAuth2 to obtain user authorization for
             accessing their related data. Therefore, the Time Tracker
-            application will direct users to the Basecamp consent page in a
+            application will direct user to the Basecamp consent page in a
             browser for login and permission granting. The user will then be
             redirected back to the application with an Access Token.
           </p>
           <p>
             The Access Token provided by Basecamp was sent from the Frontend to
             the Backend to be stored, so that this process didn't have to be
-            repeated until the token needed to be refreshed. At that stage, the
-            Backend had the authority to retrieve the user's To-do data. The
-            Frontend requested the To-do data from the Backend through an API
+            repeated until the token had to be refreshed. At that stage, the
+            Backend had the authority to retrieve the user's to-do data. The
+            Frontend requested those data from Backend through an API
             provided by the Backend. The Backend then supplied the requested
-            list of To-dos. Where did this To-do data come from? It was
-            periodically accessed from the Basecamp API by the Backend. Not all
-            To-dos came from Basecamp; our database also stored new To-dos
+            list of to-do. Where did these to-do data come from? They were
+            periodically accessed by our backend from the Basecamp API. Not all
+            to-dos came from Basecamp; our database also stored new to-dos
             created by users through the Time Tracker application.
           </p>
           <p>
-            The To-do list provided by the Backend needed to be stored on the
+            The to-do list provided by the Backend needed to be stored on the
             user's device to keep the number of requests efficient and to
             facilitate easy processing. This functionality was supported by
             Sembast.
           </p>
           <p>
-            When a user ran the Stopwatch on a To-do, the application saved each
-            second locally. If the user wanted to switch To-dos or had finished
-            and wanted to save it, the Frontend sent the metadata of that To-do
+            When a user ran the Stopwatch on a to-do, the application saved each
+            second locally. If the user wanted to switch to another to-do or had finished
+            and wanted to save it, the Frontend sent the metadata of that to-do
             to the Backend, ensuring it was persisted seamlessly.
           </p>
         </article>
@@ -165,14 +165,14 @@
           <p><em>Not only user interface.</em></p>
           <p>
             In my opinion, the challenging part of the MVP that I mentioned
-            earlier is the retrieval and management of user to-do lists. This
-            data originates from the backend's database and is also stored on
+            earlier is the retrieval and management of user to-do lists. These
+            data originates from the backend's database and are also stored on
             the user's device in the form of a NoSQL-style database file (.db)
             that can be managed.
           </p>
           <p>
             Data's Create, Read, Update, and Delete (CRUD) operations needed to
-            be implemented using Sembast as its interface. There was
+            be implemented using Sembast as their interface. There was
             synchronization between remote and local to-dos to ensure users
             always had their to-dos in the latest state (without losing
             progress). This synchronization had the potential to cause conflicts
@@ -184,10 +184,10 @@
           <p>
             Coding requires dedication and patience, to help us with that,
             <em>use the time to rest and think about the product</em>.
-            Understands acceptance criteria and the product owner's expectations
+            Understands acceptance criterias and the product owner's expectations
             for the application, then taking the time to describe how it works
-            will help direct the implementation to be on target. Draw the flow
-            if it is hard to imagine.
+            will help direct the implementation to be on target. Draw a flow
+            if it is difficult to imagine.
           </p>
           <p>
             It is also crucial to maintain good and healthy communication with
