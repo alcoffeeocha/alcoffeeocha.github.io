@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -42,9 +42,10 @@
 
   <body>
     <div class="container">
-      <main>
+      <main itemscope itemtype="https://schema.org/Person">
         <h1>
-          I am <span class="js-my-name">Alkahfi</span>. Welcome to My Homepage.
+          I am <span class="js-my-name" itemprop="givenName">Alkahfi</span>.
+          Welcome to My Homepage.
         </h1>
         <p>
           Thanks to
@@ -81,8 +82,10 @@
         <p>Ask me anything — life, coding, software development, or Islam.</p>
         <p>
           Through
-          <a href="mailto:alkahfi25@gmail.com">email</a> or
-          <a href="https://www.linkedin.com/in/alcoffeeocha/">LinkedIn</a>.
+          <a href="mailto:alkahfi25@gmail.com" itemprop="email">email</a> or
+          <a href="https://www.linkedin.com/in/alcoffeeocha/" itemprop="sameAs"
+            >LinkedIn</a
+          >.
         </p>
       </main>
     </div>
@@ -97,6 +100,17 @@
         return randomIndex;
       }
       myName.textContent = nickNames[pickNickRandomly()];
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "email": "mailto:alkahfi25@gmail.com",
+        "image": "//assets/ethical-hacker-wannabe.jpg",
+        "jobTitle": "Frontend Developer",
+        "name": "Muhammad Alkahfi Khuzaimy Abdullah",
+        "url": "https://kahfi.dev"
+      }
     </script>
   </body>
 </html>

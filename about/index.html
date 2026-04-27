@@ -6,7 +6,6 @@
     <title>Alkahfi | About</title>
     <link rel="stylesheet" href="/all.css?v=210624" />
     <link rel="icon" type="image/x-icon" href="/assets/favicon-straw.ico" />
-    <meta name="robots" content="noindex,nofollow" />
   </head>
 
   <body>
@@ -15,7 +14,7 @@
         <a href="/">Home</a>
       </nav>
       <hr style="border-style: dashed" />
-      <main>
+      <main itemscope itemtype="https://schema.org/Person">
         <header>
           <h1 class="_none">About Me</h1>
         </header>
@@ -41,7 +40,9 @@
               alt="an idealist men who learns to be more realistic"
             />
           </figure>
-          <p>You can call me Alkahfi, Kahfi or Alfi.</p>
+          <p>
+            You can call me <span itemprop="name">Alkahfi</span>, Kahfi or Alfi.
+          </p>
         </article>
         <article>
           <h2>IT Enthusiast</h2>
@@ -72,7 +73,8 @@
           <h3>Working as a Programmer</h3>
           <p>
             In terms of work, programming roles or professions can be specific.
-            I've worked as a <strong>Frontend Developer</strong>, a role
+            I've worked as a
+            <strong itemprop="jobTitle">Frontend Developer</strong>, a role
             responsible for developing software on the user interface side — the
             part you see and interact with, such as the input box where you type
             an Instagram caption. A contrasting role is the Backend Developer,
