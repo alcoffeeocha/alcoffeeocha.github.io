@@ -1,6 +1,9 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <!-- Start cookieyes banner --> 
+    <script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/01bf0d2495b22f515cf870b59da6d5df/script.js"></script> 
+    <!-- End cookieyes banner -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Muhammad Alkahfi</title>
@@ -38,6 +41,7 @@
       property="twitter:image"
       content="https://kahfi.dev/assets/ethical-hacker-wannabe.jpg"
     />
+
   </head>
 
   <body>
@@ -70,6 +74,9 @@
             </li>
             <li>
               <a href="works">Lessons Learned from Past Work.</a>
+            </li>
+            <li>
+              <a href="reflections">Reflections</a>
             </li>
             <li>
               <a href="idn-translations"
@@ -111,6 +118,16 @@
         "name": "Muhammad Alkahfi Khuzaimy Abdullah",
         "url": "https://kahfi.dev"
       }
+    </script>
+    <script>
+      function setCookie(cname, cvalue, exdays) {
+        const d = new Date();
+        d.setTime(d.getTime() + (exdays*24*60*60*1000));
+        let expires = "expires="+ d.toUTCString();
+        document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+      }
+
+      setCookie("hello", "friends", 2)
     </script>
   </body>
 </html>
